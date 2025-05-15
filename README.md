@@ -56,10 +56,14 @@ Once you finish the assignment, submit a URL link to your repository or your pul
 
   - Create a new Postman environment named “AdvancedPromoEnv.”
   - Define a variable `baseUrl` with the value pointing to your Spring Boot application (e.g., `http://localhost:8080`).
+    
+![](/images/baseUrl.png)
 
 - **Collection Creation:**
 
   - Create a Postman collection titled “Advanced DI & Early Bird Discount Tests.”
+
+![](/images/collection.png)
 
 - **Design the Following Requests:**
 
@@ -71,16 +75,23 @@ Once you finish the assignment, submit a URL link to your repository or your pul
   - **Negative Test Request:**
     - Change the query parameters (e.g., booking closer to the event date) to test the edge cases, verifying that no discount is applied when appropriate.
 
+![](/images/withDiscount.png)
+![](/images/noDiscount.png)
 - **Add Scripts:**
 
   - **Pre-request Script:** (Optional) Log a message to indicate that the request is starting.
+
+![](/images/startingRequestLog.png)
   - **Post-response Script:** Write a script that validates:
     - The response status code.
     - That the response contains a discount value or message consistent with your business rules.
     - Optionally, log key output for debugging purposes.
 
+![](/images/postResponse.png)
+
 - **Run and Validate:**
   - Use the Postman Collection Runner to execute your requests.
+![](/images/collectionRunner.png)
   - Test both the positive (discount applied) and negative (no discount) scenarios by toggling the property `feature.earlybird.enabled` and by varying the query parameters.
 
 <br />
@@ -91,11 +102,18 @@ Update your repository’s `README.md` to include:
 
 - A brief explanation of your design choices for the **EarlyBirdDiscountService**.
 - Answers to:
-  - Why did you choose constructor-based DI for this lab?
+  - Why did you choose constructor-based DI for this lab? 
+  
+Porque lo hemos visto en clase.
   - What advantages do Postman pre-request and post-response scripts offer for automated testing?
+  
+Permite automatizar los test de una forma más cómoda y segura.
   - How does your application behave when the early bird feature is disabled?
+
+Directamente no arranca la app.
   - What are some challenges you faced when integrating advanced DI with API testing?
 
+No lo sé...
 <br />
 
 ## FAQs
